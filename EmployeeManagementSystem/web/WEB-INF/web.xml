@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/my data</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>AddEmployee</servlet-name>
+        <servlet-class>controller.AddEmployee</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUpBackend</servlet-name>
+        <servlet-class>controller.SignUpBackend</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Validate</servlet-name>
+        <servlet-class>controller.Validate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployee</servlet-name>
+        <url-pattern>/AddEmployee</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUpBackend</servlet-name>
+        <url-pattern>/SignUpBackend</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Validate</servlet-name>
+        <url-pattern>/Validate</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
